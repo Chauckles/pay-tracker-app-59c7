@@ -30,7 +30,7 @@ export function ClockButton({ activeShift, activeDuration, hourlyRate, onClockIn
   }
 
   const currentEarnings = activeShift
-    ? calculatePay(shiftHours({ ...activeShift }), { id: 'settings', hourlyRate, overtimeThreshold: 8, overtimeMultiplier: 1.5, weeklyHoursTarget: 40, reminderClockIn: null, reminderClockOut: null, notificationsEnabled: false })
+    ? calculatePay(shiftHours({ ...activeShift }), { id: 'settings', hourlyRate, overtimeThreshold: 8, overtimeMultiplier: 1.5, weeklyHoursTarget: 40, reminderClockIn: null, reminderClockOut: null, notificationsEnabled: false, lunchTime: null, lunchDurationMinutes: 30, extraBreaks: [] })
     : 0
 
   return (
